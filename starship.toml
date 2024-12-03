@@ -1,0 +1,68 @@
+## Configuration file for starship shell prompt saved in ~/.config/starship.toml. 
+## ANSI colour reference table: https://i.stack.imgur.com/KTSQa.png.
+
+# Prompt-wide option to configure the format of the prompt. Ordering of '$line_break' matters. 
+format = """
+$username\
+$hostname\
+$directory\
+$sudo\
+$git_branch\
+$git_status\
+$line_break\
+$character\
+$cmd_duration"""
+
+# Disable the blank line at the start of the prompt.
+add_newline = false
+
+# Separate the prompt into two lines.
+[line_break]
+disabled = false 
+
+# Show the duration of the last command's execution time.
+[cmd_duration]
+disabled = true
+
+# Show a character indicating whether the last command was successful or not.
+[character]
+success_symbol = '[➜](bold green) '
+error_symbol = '[✖](bold red) '
+
+# Show the current directory with limited context.
+[directory]
+truncation_length = 1
+format = '[$path]($style)[$read_only]($read_only_style) '
+style = 'bold fg:253'
+
+# Show the system hostname.
+[hostname]
+ssh_only = false
+format = '[@](bold white)[$hostname](bold fg:214)[:](bold white) '
+trim_at = '.'  # Cut off hostname after the first period
+disabled = false
+
+# Show the active user's username.
+[username]
+format = '[$user](bold fg:14)'
+disabled = false
+show_always = true
+
+# Displays if sudo credentials are currently cached.
+[sudo]
+format = '[ $symbol]($style)'
+style = 'bold green'
+symbol = '# '
+disabled = false
+
+# Git branch name.
+[git_branch]
+symbol = " "
+format = '[$symbol$branch]($style) '
+style = 'bold fg:136'
+
+# Git status (untracked, modified, staged files, etc.).
+[git_status]
+format = '[$all_status$ahead_behind]($style) '
+style = 'bold fg:136'
+disabled = false
