@@ -38,3 +38,11 @@ multiplier = 3
 [terminal.shell]
 # args = ["new-session", "-A", "-s", "default"]
 program = "tmux"
+
+[env]
+TERM = "xterm-256color"
+
+# Uncomment for Windows
+#[shell]
+#program = "wsl.exe"
+#args = ["--cd","~"]
