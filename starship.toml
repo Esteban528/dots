@@ -1,7 +1,3 @@
-## Configuration file for starship shell prompt saved in ~/.config/starship.toml. 
-## ANSI colour reference table: https://i.stack.imgur.com/KTSQa.png.
-
-# Prompt-wide option to configure the format of the prompt. Ordering of '$line_break' matters. 
 format = """
 $username\
 $hostname\
@@ -38,7 +34,7 @@ style = 'bold fg:253'
 # Show the system hostname.
 [hostname]
 ssh_only = false
-format = '[@](bold white)[$hostname](bold fg:214)[:](bold white) '
+format = '[@](bold white)[$hostname](bold fg:114)[:](bold white) '
 trim_at = '.'  # Cut off hostname after the first period
 disabled = false
 
