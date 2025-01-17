@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-#Original https://gitlab.com/Alucherdi/kyst/-/blob/main/k.sh?ref_type=heads
 
 if [ $# -eq 0 ]; then
     selected_path=$( (echo ~; echo /etc/nixos; fd . ~/Dev --type d --max-depth 5 -E Resources -E target -E vendor -E node_modules -E src) | fzf)
 
     [ -z $selected_path ] && exit 0
 
-    session_name=${selected_path}           
+    # session_name=${selected_path}           
+    session_name=${selected_path#$HOME/Dev/}           
     session_name=${session_name%*/}
     # session_name=$(echo $session_name | sed s#$HOME#home#g)
     session_name=$(echo $session_name | sed s#/#_#g)
