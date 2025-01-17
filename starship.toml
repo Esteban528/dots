@@ -22,8 +22,8 @@ disabled = true
 
 # Show a character indicating whether the last command was successful or not.
 [character]
-success_symbol = '[➜](bold green) '
-error_symbol = '[✖](bold red) '
+success_symbol = '[+](bold green) '
+error_symbol = '[x](bold red) '
 
 # Show the current directory with limited context.
 [directory]
