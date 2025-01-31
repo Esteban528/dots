@@ -1,49 +1,49 @@
 [[colors.indexed_colors]]
-color = "#ffa066"  # Additional color
+color = "#d27e46"  # Tono terracota suave
 index = 16
 
 [[colors.indexed_colors]]
-color = "#ff5d62"  # Additional color
+color = "#c85552"  # Rojo apagado
 index = 17
 
 [colors.bright]
-black = "#727169"   # Bright ANSI Black
-blue = "#7fb4ca"    # Bright ANSI Blue
-cyan = "#7aa89f"    # Bright ANSI Cyan
-green = "#98bb6c"   # Bright ANSI Green
-magenta = "#938aa9" # Bright ANSI Magenta
-red = "#e82424"     # Bright ANSI Red
-white = "#dcd7ba"   # Bright ANSI White
-yellow = "#e6c384"  # Bright ANSI Yellow
+black = "#6f675f"   # Gris cálido
+blue = "#7fa8b8"    # Azul suave
+cyan = "#7a9d94"    # Cyan apagado
+green = "#8fa876"   # Verde suave
+magenta = "#8a7f9a" # Magenta apagado
+red = "#d74747"     # Rojo suave
+white = "#dcd7ba"   # Beige claro (se mantiene)
+yellow = "#d4b073"  # Amarillo suave
 
 [colors.cursor]
-cursor = "#c8c093"  # Cursor color
-text = "#c8c093"    # Cursor text color
+cursor = "#c8c093"  # Beige claro (se mantiene)
+text = "#c8c093"    # Beige claro (se mantiene)
 
 [colors.normal]
-black = "#090618"   # ANSI Black
-blue = "#7e9cd8"    # ANSI Blue
-cyan = "#6a9589"    # ANSI Cyan
-green = "#76946a"   # ANSI Green
-magenta = "#957fb8" # ANSI Magenta
-red = "#c34043"     # ANSI Red
-white = "#c8c093"   # ANSI White
-yellow = "#c0a36e"  # ANSI Yellow
+black = "#1f1f1f"   # Negro cálido
+blue = "#6a7e9e"    # Azul apagado
+cyan = "#5a8b7f"    # Cyan oscuro suave
+green = "#6a8560"   # Verde oscuro suave
+magenta = "#7a6a8a" # Magenta oscuro suave
+red = "#b44d4d"     # Rojo oscuro suave
+white = "#c8c093"   # Beige claro (se mantiene)
+yellow = "#b89c5e"  # Amarillo oscuro suave
 
 [colors.primary]
-background = "#181616"  # Background color
-foreground = "#dcd7ba"  # Foreground color
+background = "#303030"  # Fondo oscuro cálido
+foreground = "#dcd7ba"  # Beige claro (se mantiene)
 
 [colors.selection]
-background = "#2d4f67"  # Selection background color
-text = "#c8c093"        # Selection text color
+background = "#3a4a5a"  # Azul grisáceo apagado
+text = "#c8c093"        # Beige claro (se mantiene)
 
 [cursor]
 style = "Block"
 unfocused_hollow = true
 
 [font]
-size = 14
+size = 12
 
 [font.normal]
 family = "Iosevka NF"
@@ -62,8 +62,13 @@ TERM = "xterm-256color"
 
 
 [window]
-padding = { x = 7, y = 9 }
+padding = { x = 6, y = 9 }
 # Uncomment for Windows
 #[shell]
 #program = "wsl.exe"
 #args = ["--cd","~"]
+
+[[keyboard.bindings]]
+key = "F"
+mods = "Control"
+command = { program = "tmux", args = ["split-window", "-h", "bash -c /home/estebandev/.tmux/init-session.sh"] }
